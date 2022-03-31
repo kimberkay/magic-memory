@@ -1,4 +1,7 @@
 import './Modal.css'
+import confetti from 'canvas-confetti'
+
+
 
 export default function WinModal( {shuffleCards}) {
   return (

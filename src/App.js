@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import SingleCard from './components/SingleCard'
 import LostModal from './components/LostModal'
 import WinModal from './components/WinModal'
+import confetti from 'canvas-confetti'
 import './App.css'
 
 
@@ -17,7 +18,7 @@ const cardImages = [
 
 function App() {
 const [ cards, setCards ] = useState([])
-const [ turns, setTurns ] = useState(0)
+const [ turns, setTurns ] = useState(12)
 const [ choiceOne, setChoiceOne ] = useState(null)
 const [ choiceTwo, setChoiceTwo ] = useState(null)
 const [ disabled, setDisabled ] = useState(false)
@@ -35,7 +36,7 @@ const [ showButton, setShowButton ] = useState(true)
 
     setShowButton(true)
     setCards(shuffledCards)
-    setTurns(0)
+    setTurns(12)
     setLostModal(false)
     setWinModal(false)
   }
@@ -71,14 +72,21 @@ useEffect(() => {
 const winner = cards.filter(card => card.matched === true).length
 
 
+
+
+
 useEffect(() => {
-  if(turns === 14) {
+  if(turns === 0) {
     setLostModal(true)
     setCards([])
     setShowButton(false)
   } else if(winner === 12) {
       setWinModal(true)
       setShowButton(false)
+      {confetti({
+        particleCount: 200,
+        spread: 50,
+      })}
     } else {
     }
   
@@ -89,7 +97,7 @@ useEffect(() => {
 const resetTurn = () => {
   setChoiceOne(null)
   setChoiceTwo(null)
-  setTurns(prevTurns => prevTurns + 1)
+  setTurns(prevTurns => prevTurns - 1)
   setDisabled(false)
   }
 
@@ -121,7 +129,7 @@ const resetTurn = () => {
           /> 
         ))}
       </div>
-      <p>Turns: {turns}</p>
+      <p>Turns Left: {turns}</p>
     </div>
   );
 }
