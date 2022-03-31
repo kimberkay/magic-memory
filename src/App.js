@@ -85,7 +85,7 @@ useEffect(() => {
       setShowButton(false)
       {confetti({
         particleCount: 200,
-        spread: 50,
+        spread: 180,
       })}
     } else {
     }
