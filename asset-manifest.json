@@ -1,20 +1,27 @@
 {
   "files": {
     "main.css": "/magic-memory/static/css/main.c86f23cc.chunk.css",
-    "main.js": "/magic-memory/static/js/main.b3cb3445.chunk.js",
-    "main.js.map": "/magic-memory/static/js/main.b3cb3445.chunk.js.map",
+    "main.js": "/magic-memory/static/js/main.b9ebe2db.chunk.js",
+    "main.js.map": "/magic-memory/static/js/main.b9ebe2db.chunk.js.map",
     "runtime-main.js": "/magic-memory/static/js/runtime-main.e415b3c6.js",
     "runtime-main.js.map": "/magic-memory/static/js/runtime-main.e415b3c6.js.map",
     "static/js/2.da678253.chunk.js": "/magic-memory/static/js/2.da678253.chunk.js",
     "static/js/2.da678253.chunk.js.map": "/magic-memory/static/js/2.da678253.chunk.js.map",
     "index.html": "/magic-memory/index.html",
     "static/css/main.c86f23cc.chunk.css.map": "/magic-memory/static/css/main.c86f23cc.chunk.css.map",
-    "static/js/2.da678253.chunk.js.LICENSE.txt": "/magic-memory/static/js/2.da678253.chunk.js.LICENSE.txt"
+    "static/js/2.da678253.chunk.js.LICENSE.txt": "/magic-memory/static/js/2.da678253.chunk.js.LICENSE.txt",
+    "static/media/beach-babies.b64899ed.png": "/magic-memory/static/media/beach-babies.b64899ed.png",
+    "static/media/card-background.5464d3f5.png": "/magic-memory/static/media/card-background.5464d3f5.png",
+    "static/media/jo-in-snow.b9a6264d.png": "/magic-memory/static/media/jo-in-snow.b9a6264d.png",
+    "static/media/jojo-goggles.f18b4d60.png": "/magic-memory/static/media/jojo-goggles.f18b4d60.png",
+    "static/media/lou-in-snow.04f399b8.png": "/magic-memory/static/media/lou-in-snow.04f399b8.png",
+    "static/media/lou-sunglasses.7128cbc7.png": "/magic-memory/static/media/lou-sunglasses.7128cbc7.png",
+    "static/media/rain-boots.75904f9a.png": "/magic-memory/static/media/rain-boots.75904f9a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e415b3c6.js",
     "static/js/2.da678253.chunk.js",
     "static/css/main.c86f23cc.chunk.css",
-    "static/js/main.b3cb3445.chunk.js"
+    "static/js/main.b9ebe2db.chunk.js"
   ]
 }
