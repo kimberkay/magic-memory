@@ -1,6 +1,8 @@
 .card {
   position: relative;
+  animation: flip 500ms ease-in;
 }
+
 .card img {
   width: 100%;
   display: block;

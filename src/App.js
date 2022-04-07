@@ -27,7 +27,6 @@ const [ winModal, setWinModal ] = useState(false)
 const [ showButton, setShowButton ] = useState(true)
 
 
-
   //shuffle cards for new game
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -36,7 +35,7 @@ const [ showButton, setShowButton ] = useState(true)
 
     setShowButton(true)
     setCards(shuffledCards)
-    setTurns(12)
+    setTurns(14)
     setLostModal(false)
     setWinModal(false)
   }
@@ -72,9 +71,6 @@ useEffect(() => {
 const winner = cards.filter(card => card.matched === true).length
 
 
-
-
-
 useEffect(() => {
   if(turns === 0) {
     setLostModal(true)
@@ -82,16 +78,17 @@ useEffect(() => {
     setShowButton(false)
   } else if(winner === 12) {
       setWinModal(true)
+      // setCards([])
       setShowButton(false)
-      {confetti({
+      setTimeout(()=>{confetti({
         particleCount: 200,
         spread: 180,
-      })}
+      })}, 1000)
+      setTimeout(()=>setWinModal(false),3500)
+      setTimeout(()=>setShowButton(true),4500)
     } else {
     }
-  
 }, [turns, winner])
-  
 
 
 const resetTurn = () => {
@@ -101,11 +98,11 @@ const resetTurn = () => {
   setDisabled(false)
   }
 
-
-
   return (
     <div className="App">
-      <h1>Sisters</h1>
+      <h1>Memory Match</h1>
+          <p>You have twelve turns to make a match.</p>
+
       {showButton && (
         <button onClick={shuffleCards}>New Game</button>
       )}
@@ -115,10 +112,11 @@ const resetTurn = () => {
       )}
 
       {winModal && (
-        <WinModal shuffleCards={shuffleCards} />
+        <WinModal shuffleCards={shuffleCards} className="card-grid" /> 
       )}
 
-      <div className="card-grid">
+      {!winModal && (
+        <div className="card-grid">
         {cards.map(card=> (
           <SingleCard 
           key={card.id}
@@ -128,12 +126,11 @@ const resetTurn = () => {
           disabled={disabled}
           /> 
         ))}
-      </div>
+      </div>)}
       <p>Turns Left: {turns}</p>
     </div>
   );
 }
 
 
-//player must make all matches in 15 turns or they lose game
 export default App

@@ -13,12 +13,23 @@ button {
   font-size: 1em;
 }
 button:hover {
-  background: #c23866;
+  background: #cd2aa7fa;
   color: #fff;
 }
+
 .card-grid {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  animation: flip 1s ease-in;
+}
+
+@keyframes flip {
+0% {
+  opacity: 0%;
+}
+100% {
+  opacity: 100%; 
+}
 }
