@@ -35,7 +35,7 @@ const [ showButton, setShowButton ] = useState(true)
 
     setShowButton(true)
     setCards(shuffledCards)
-    setTurns(14)
+    setTurns(12)
     setLostModal(false)
     setWinModal(false)
   }
