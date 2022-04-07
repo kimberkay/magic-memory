@@ -1,7 +1,7 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Magic Memory Game
 
+An app created to explore React and to add a fun way to shamelessly show off pictures of my darlings.
 ## Available Scripts
 
 In the project directory, you can run:
